@@ -30,9 +30,15 @@ public static class Methods
             {
                 case NextAction.Continue:
                     continue;
-                case NextAction.Change:
+                case NextAction.ChangeMethod:
+                    operation = operation == Operations.Decrypt ? Operations.Encrypt : Operations.Decrypt;
+                    continue;
+                case NextAction.Restart:
                     (operation, key) = SelectOptions();
                     continue;
+                case NextAction.Exit:
+                default:
+                    break;
             }
 
             break;
