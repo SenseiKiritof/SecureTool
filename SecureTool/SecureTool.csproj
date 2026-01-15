@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <Authors>SenseiKiritof</Authors>
+        <Copyright>SenseiKiritof</Copyright>
+        <Owners>SenseiKiritof</Owners>
+        <PackageProjectUrl>https://github.com/SenseiKiritof/SecureTool</PackageProjectUrl>
+        <Title>SecureTool</Title>
+        <Description>Secure Console Tool</Description>
+        <PackageVersion>1.0.0</PackageVersion>
+
+        <PackAsTool>true</PackAsTool>
+        <ToolCommandName>secureTool</ToolCommandName>
+
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>SecureTool</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Sharprompt" Version="2.4.5" />
+      <PackageReference Include="SSecureUtils" Version="1.0.0" />
+    </ItemGroup>
+
+</Project>
