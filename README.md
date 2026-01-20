@@ -1,4 +1,4 @@
-# X3SecureTool
+# SSecureTool
 
 ## Prerequisites
 - **.NET 8**
