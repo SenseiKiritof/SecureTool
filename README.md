@@ -19,6 +19,25 @@ dotnet tool install \
 dotnet tool install --global SecureTool
 ```
 
+## Update
+```
+dotnet tool update --global SecureTool
+```
+
+Needed after every published version. Until you update, the tool keeps producing
+the previous format: still readable everywhere, it just doesn't gain the tamper
+detection.
+
+From a local feed:
+```
+dotnet tool update --global SecureTool --add-source ~/nuget-local
+```
+
+To check which version is installed:
+```
+dotnet tool list --global | grep securetool
+```
+
 ## Utilizzation
 In the command line, type `secureTool`
 You will be asked to select either encryption or decryption,
