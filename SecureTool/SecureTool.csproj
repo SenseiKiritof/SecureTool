@@ -5,6 +5,9 @@
         <Copyright>SenseiKiritof</Copyright>
         <Owners>SenseiKiritof</Owners>
         <PackageProjectUrl>https://github.com/SenseiKiritof/SecureTool</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/SenseiKiritof/SecureTool.git</RepositoryUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
         <Title>SecureTool</Title>
         <Description>Secure Console Tool</Description>
         <PackageVersion>1.1.0</PackageVersion>
@@ -20,8 +23,15 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Sharprompt" Version="3.0.1" />
+      <PackageReference Include="Sharprompt" Version="3.2.0" />
       <PackageReference Include="SSecureUtils" Version="1.1.0" />
+      <!-- Override transitivo di Microsoft.Extensions.Configuration.Json 8.0.0,
+           che altrimenti risolve System.Text.Json 8.0.0 (CVE-2024-30105). -->
+      <PackageReference Include="System.Text.Json" Version="8.0.6" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="../README.md" Pack="true" PackagePath="/" />
     </ItemGroup>
 
 </Project>
