@@ -1,20 +1,19 @@
 # SecureTool
 
 ## Prerequisites
-- **.NET 8**
-- **SSecureUtils 1.1.0 or later installed**
+- **.NET 8 SDK**
+
+`SSecureUtils` is pulled in automatically as a NuGet dependency, no manual install needed.
 
 ## Local build and installation
 ```
-dotnet pack -c Release
-dotnet nuget push SecureTool/bin/Release/SecureTool.1.0.0.nupkg --source LocalPackages
-dotnet tool install \
-  --global \
-  --add-source ~/nuget-local \
-  SecureTool
+dotnet pack SecureTool/SecureTool.csproj -c Release -o ./artifacts
+dotnet nuget add source ~/nuget-local --name LocalPackages
+dotnet nuget push ./artifacts/SecureTool.*.nupkg --source LocalPackages
+dotnet tool install --global --add-source ~/nuget-local SecureTool
 ```
 
-## Nuget repo installation
+## NuGet installation
 ```
 dotnet tool install --global SecureTool
 ```
@@ -38,7 +37,7 @@ To check which version is installed:
 dotnet tool list --global | grep securetool
 ```
 
-## Utilizzation
+## Usage
 In the command line, type `secureTool`
 You will be asked to select either encryption or decryption,
 ```
@@ -58,7 +57,7 @@ then you will be prompted to be processed.
 ✔ Type the encryption key: ********************************
 ? Type the string to Encrypt: {STRING_TO_ENCRYPT}
 ```
-change {ENC_KEY} with your encryption key.
+change {STRING_TO_ENCRYPT} with the string you want to encrypt.
 The tool will then perform the selected operation and display the result.
 
 After the operation is completed, you will be prompted to select either to **Continue** encrypting,
