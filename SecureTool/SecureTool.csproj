@@ -10,7 +10,7 @@
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <Title>SecureTool</Title>
         <Description>Secure Console Tool</Description>
-        <PackageVersion>1.1.0</PackageVersion>
+        <PackageVersion>1.1.1</PackageVersion>
 
         <PackAsTool>true</PackAsTool>
         <ToolCommandName>secureTool</ToolCommandName>
@@ -24,7 +24,7 @@
 
     <ItemGroup>
       <PackageReference Include="Sharprompt" Version="3.2.0" />
-      <PackageReference Include="SSecureUtils" Version="1.1.0" />
+      <PackageReference Include="SSecureUtils" Version="1.1.1" />
       <!-- Override transitivo di Microsoft.Extensions.Configuration.Json 8.0.0,
            che altrimenti risolve System.Text.Json 8.0.0 (CVE-2024-30105). -->
       <PackageReference Include="System.Text.Json" Version="8.0.6" />
